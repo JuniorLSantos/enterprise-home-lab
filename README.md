@@ -39,7 +39,7 @@ This project aims to improve my practical skills in:
 
 ## Documentation
 
-- [Project Planning](docs/01-planning.md)
+- [Project Planning](docs/01-planning-01.md)
 
 ---
 
