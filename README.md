@@ -49,3 +49,7 @@ This project aims to improve my practical skills in:
 - ✅ Initial documentation completed
 - ⏳ VirtualBox installation
 - ⏳ Windows Server deployment
+
+---
+
+Project started in July 2026.
