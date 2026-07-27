@@ -1,43 +1,51 @@
 # Enterprise Home Lab
 
-## Project Overview
+## Overview
 
-This repository documents the creation of an Enterprise Home Lab designed to simulate a real corporate infrastructure.
+This repository documents the development of an enterprise-style home lab designed to simulate a real corporate IT infrastructure.
 
-The project focuses on Windows Server administration, networking, Linux, cybersecurity and monitoring while documenting every configuration step.
+The goal is to gain hands-on experience with Windows Server, Active Directory, Linux, networking and cybersecurity while documenting every step of the learning process.
 
 ---
 
-## Tecnologias
+## Technologies
 
 - Windows Server 2022
 - Windows 11
-- Ubuntu Server
-- pfSense
-- Kali Linux
 - Active Directory
 - DNS
 - DHCP
 - Group Policy
-- File Server
+- Ubuntu Server
+- Docker
+- pfSense
+- Kali Linux
 - Splunk
 
 ---
 
-## Objetivos
+## Learning Goals
 
-- Aprender Active Directory
-- Configurar um domínio Windows
-- Administrar usuários e grupos
-- Implementar DNS e DHCP
-- Configurar políticas de grupo (GPO)
-- Criar um servidor de arquivos
-- Configurar firewall com pfSense
-- Centralizar logs com Splunk
-- Documentar todas as etapas
+This project aims to improve my practical skills in:
+
+- Windows Server Administration
+- Active Directory
+- Network Services
+- Linux Administration
+- Cybersecurity
+- Infrastructure Documentation
 
 ---
 
-## Status
+## Documentation
 
-🚧 Projeto em desenvolvimento.
+- [Project Planning](docs/01-project-planning.md)
+
+---
+
+## Current Status
+
+- ✅ Repository created
+- ✅ Initial documentation completed
+- ⏳ VirtualBox installation
+- ⏳ Windows Server deployment
