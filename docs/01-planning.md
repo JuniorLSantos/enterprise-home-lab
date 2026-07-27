@@ -1,30 +1,38 @@
-# Planejamento do Projeto
+# Project Planning
 
-## Objetivo
+## Project Goal
 
-Construir um laboratório virtual que simule a infraestrutura de uma pequena empresa.
+Build an enterprise-style home lab to simulate a small company's IT infrastructure.
 
-## Tecnologias
+## Environment
 
-- Windows Server 2022
+The lab will be composed of virtual machines running:
+
+- Windows Server
 - Windows 11
 - Ubuntu Server
 - Kali Linux
 - pfSense
 - Splunk
 
-## O que pretendo aprender
+## Expected Outcome
 
-- Active Directory
-- DNS
-- DHCP
-- GPO
-- File Server
-- Firewall
-- VPN
-- Hardening
-- Monitoramento
+By the end of this project I expect to be able to:
 
-## Observações
+- Deploy Active Directory
+- Configure DNS and DHCP
+- Manage Group Policies
+- Configure a File Server
+- Implement network security
+- Centralize logs with Splunk
 
-Este projeto será desenvolvido por etapas, documentando cada configuração realizada e os desafios encontrados durante o processo.
+## Documentation Strategy
+
+Every stage of the project will include:
+
+- Objectives
+- Configuration steps
+- Screenshots
+- Problems encountered
+- Solutions
+- Lessons learned
