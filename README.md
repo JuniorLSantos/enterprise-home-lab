@@ -6,17 +6,27 @@ This repository documents the development of an enterprise-style home lab design
 
 The goal is to gain hands-on experience with Windows Server, Active Directory, Linux, networking and cybersecurity while documenting every step of the learning process.
 
-                 Internet
-                     │
-                  pfSense
-                     │
-      ┌──────────────┼──────────────┐
-      │              │              │
-    DC01         CLIENT01       LINUX01
-      │
-   SPLUNK01
-      │
-   KALI01
+                     Internet
+                         │
+                  ┌─────────────┐
+                  │   pfSense   │
+                  │ 192.168.10.1│
+                  └──────┬──────┘
+                         │
+        ┌────────────────┼────────────────┐
+        │                │                │
+   ┌────────┐      ┌──────────┐     ┌─────────┐
+   │ DC01   │      │CLIENT01  │     │LINUX01  │
+   │ AD/DNS │      │Win11     │     │Ubuntu   │
+   └────────┘      └──────────┘     └─────────┘
+        │
+   ┌────────┐
+   │Splunk  │
+   └────────┘
+        │
+   ┌────────┐
+   │ Kali   │
+   └────────┘
 
 ---
 
