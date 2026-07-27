@@ -64,7 +64,8 @@ This project aims to improve my practical skills in:
 
 ## Documentation
 
-- [Project Planning](docs/01-planning-01.md)
+- [Project Planning](docs/01-planning.md)
+- [Road Map](docs/01-road-map.md)
 
 ---
 
