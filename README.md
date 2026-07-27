@@ -6,6 +6,19 @@ This repository documents the development of an enterprise-style home lab design
 
 The goal is to gain hands-on experience with Windows Server, Active Directory, Linux, networking and cybersecurity while documenting every step of the learning process.
 
+
+                 Internet
+                     │
+                  pfSense
+                     │
+      ┌──────────────┼──────────────┐
+      │              │              │
+    DC01         CLIENT01       LINUX01
+      │
+   SPLUNK01
+      │
+   KALI01
+
 ---
 
 ## Technologies
@@ -43,12 +56,20 @@ This project aims to improve my practical skills in:
 
 ---
 
-## Current Status
+## Project Roadmap
 
-- ✅ Repository created
-- ✅ Initial documentation completed
-- ⏳ VirtualBox installation
-- ⏳ Windows Server deployment
+| Phase | Status |
+|--------|--------|
+| Project Planning | ✅ Completed |
+| Lab Architecture | ✅ Completed |
+| VirtualBox Installation | ⏳ In Progress |
+| Windows Server Installation | ⏳ Pending |
+| Active Directory | ⏳ Pending |
+| DNS | ⏳ Pending |
+| DHCP | ⏳ Pending |
+| GPO | ⏳ Pending |
+| File Server | ⏳ Pending |
+| Splunk | ⏳ Pending |
 
 ---
 

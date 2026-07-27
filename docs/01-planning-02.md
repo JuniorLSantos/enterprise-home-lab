@@ -6,13 +6,13 @@ Build an enterprise-style virtual infrastructure to simulate a small corporate e
 
 The project will be used to practice Windows Server administration, Active Directory, networking, Linux administration and cybersecurity while documenting every implementation step.
 
-## **Technologies**
+## Technologies
 
 Windows Server 2022 -> Active Directory -> Windows 11 -> Ubuntu -> Kali Linux -> pfSense -> Splunk
 
 ---
 
-## **Host Machine**
+## Host Machine
 
 - Operating System: Windows 11
 - Hypervisor: Oracle VirtualBox
@@ -20,6 +20,8 @@ Windows Server 2022 -> Active Directory -> Windows 11 -> Ubuntu -> Kali Linux ->
 ---
 
 ## Virtual Machines
+
+## Resource Allocation
 
 | VM | Role | CPU | RAM | Disk |
 |----|------|----:|----:|-----:|
@@ -30,7 +32,7 @@ Windows Server 2022 -> Active Directory -> Windows 11 -> Ubuntu -> Kali Linux ->
 | KALI01 | Penetration Testing | 2 | 2 GB | 40 GB |
 | SPLUNK01 | Log Management | 2 | 4 GB | 80 GB |
 
-## Resource Planning
+## Design Decisions
 
 The CPU, memory and storage values were selected to provide a balance between performance and efficient use of the host computer's resources.
 
