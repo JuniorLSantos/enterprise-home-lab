@@ -21,6 +21,18 @@ The goal is to gain hands-on experience with Windows Server, Active Directory, L
 
 ---
 
+## Project Status
+
+| Phase | Status |
+|--------|--------|
+| Planning | ✅ |
+| Architecture | ✅ |
+| VirtualBox | ⏳ |
+| Windows Server | ⏳ |
+| Active Directory | ⏳ |
+
+---
+
 ## Technologies
 
 - Windows Server 2022
