@@ -8,9 +8,15 @@ The goal is to gain hands-on experience with Windows Server, Active Directory, L
 
 ---
 
-## Lab Architecture
+<h2 align="center">Lab Architecture</h2>
 
-![Lab Architecture](images/architecture-diagram.png)
+<p align="center">
+  <img src="images/architecture-diagram.png"
+       alt="Enterprise Home Lab Architecture"
+       width="850">
+  <br>
+  <em>Figure 1 - Enterprise Home Lab Network Topology</em>
+</p>
 
 ---
 
