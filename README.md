@@ -1,10 +1,10 @@
 # Enterprise Home Lab
 
-## Sobre o projeto
+## Project Overview
 
-Este projeto documenta a construção de um laboratório virtual voltado para infraestrutura, administração de sistemas e segurança da informação.
+This repository documents the creation of an Enterprise Home Lab designed to simulate a real corporate infrastructure.
 
-O objetivo é simular o ambiente de uma empresa utilizando tecnologias Microsoft, Linux e ferramentas de segurança.
+The project focuses on Windows Server administration, networking, Linux, cybersecurity and monitoring while documenting every configuration step.
 
 ---
 
