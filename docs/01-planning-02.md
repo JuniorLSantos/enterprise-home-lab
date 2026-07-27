@@ -9,17 +9,17 @@ The project will be used to practice Windows Server administration, Active Direc
 ## **Technologies**
 
 Windows Server 2022
-↓
+->
 Active Directory
-↓
+->
 Windows 11
-↓
+->
 Ubuntu
-↓
+->
 Kali Linux
-↓
+->
 pfSense
-↓
+->
 Splunk
 
 ---
@@ -33,13 +33,13 @@ Splunk
 
 ## **VMs**
 
-**VM*               **Função**            **CPU**            **Ram**            **DISK**
-DC01                AD,DNS,DHCP              2                 4 GB               60 GB
-CLIENT01            Cliente                  2                 4 GB               60 GB
-LINUX01             Docker                   2                 2 GB               30 GB
-FW01                Firewall                 2                 2 GB               20 GB
-KALI01              Pentest                  2                 2 GB               40 GB
-SPLUNK01            Logs                     2                 4 GB               80 GB
+**VM**               **Função**            **CPU**            **Ram**            **DISK**
+- DC01                AD,DNS,DHCP              2                 4 GB               60 GB
+- CLIENT01            Cliente                  2                 4 GB               60 GB
+- LINUX01             Docker                   2                 2 GB               30 GB
+- FW01                Firewall                 2                 2 GB               20 GB
+- KALI01              Pentest                  2                 2 GB               40 GB
+- SPLUNK01            Logs                     2                 4 GB               80 GB
 
 ## Resource Planning
 
@@ -51,31 +51,31 @@ The environment is intended for study purposes and simulates a small business in
 ## **Redes**
 
 Network Address:
->192.168.10.0/24
+- 192.168.10.0/24
 
 Subnet Mask:
->255.255.255.0
+- 255.255.255.0
 
 Gateway:
->192.168.10.1
+- 192.168.10.1
 
 DC01: //(Servidor)
->192.168.10.10
+- 192.168.10.10
 
 CLIENT01: //(Windows 11)
->192.168.10.20
+- 192.168.10.20
 
 LINUX01: //(Ubuntu)
->192.168.10.30
+- 192.168.10.30
 
 FW01: //(pfSense)
->192.168.10.1
+- 192.168.10.1
 
 KALI01: //(Kali)
->192.168.10.40
+- 192.168.10.40
 
 SPLUNK01: //(Splunk)
->192.168.10.50
+- 192.168.10.50
 
 ---
 
