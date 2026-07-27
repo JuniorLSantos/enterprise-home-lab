@@ -6,7 +6,6 @@ This repository documents the development of an enterprise-style home lab design
 
 The goal is to gain hands-on experience with Windows Server, Active Directory, Linux, networking and cybersecurity while documenting every step of the learning process.
 
-
                  Internet
                      │
                   pfSense
