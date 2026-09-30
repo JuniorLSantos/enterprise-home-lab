@@ -96,7 +96,12 @@ This project aims to improve my practical skills in:
 ## Documentation
 
 - [Project Planning](docs/01-planning.md)
-- [Road Map](docs/01-road-map.md)
+- [Project Roadmap](docs/01-road-map.md)
+- [VirtualBox Installation](docs/02-virtualbox-installation.md)
+- [Windows Server Installation](docs/03-windows-server-installation.md)
+- [Network Configuration](docs/04-network-configuration.md)
+- [Active Directory Deployment](docs/05-active-directory.md)
+- [DNS Configuration](docs/06-dns.md)
 
 ---
 
