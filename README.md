@@ -105,22 +105,4 @@ This project aims to improve my practical skills in:
 
 ---
 
-
-## Project Roadmap
-
-| Phase | Status |
-|--------|--------|
-| Project Planning | ✅ Completed |
-| Lab Architecture | ✅ Completed |
-| VirtualBox Installation |  ✅ Completed |
-| Windows Server Installation |  ✅ Completed |
-| Active Directory |  ✅ Completed |
-| DNS |  ✅ Completed |
-| DHCP | ⏳ Pending |
-| GPO | ⏳ Pending |
-| File Server | ⏳ Pending |
-| Splunk | ⏳ Pending |
-
----
-
 Project started in July 2026.

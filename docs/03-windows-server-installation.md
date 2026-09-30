@@ -249,7 +249,7 @@ The following precautions were followed:
 | Problem | Cause or observation | Resolution |
 |---|---|---|
 | Slow virtual machine | Updates and Windows Modules Installer consumed resources | Virtual hardware was adjusted and updates were allowed to finish |
-| Windows Update remained at 0% | Update components were processing or required repair | Update components were troubleshooted and the update was restarted |
+| Windows Update remained at 0% | Update components were processing or required repair | Windows Update components were repaired and the update process was restarted |
 | Shutdown appeared frozen | Update Orchestrator was stopping services | The update process was completed before continuing |
 | Poor graphical responsiveness | Initial VM resource allocation was limited | CPU and memory allocation were increased |
 
