@@ -22,13 +22,45 @@ The goal is to gain hands-on experience with Windows Server, Active Directory, L
 
 ## Project Status
 
+Last updated: September 30, 2026
+
 | Phase | Status |
-|--------|--------|
-| Planning | ✅ |
-| Architecture | ✅ |
-| VirtualBox | ⏳ |
-| Windows Server | ⏳ |
-| Active Directory | ⏳ |
+|---|---|
+| Project Planning | ✅ Completed |
+| Architecture Design | ✅ Completed |
+| VirtualBox Environment | ✅ Completed |
+| Windows Server 2022 Deployment | ✅ Completed |
+| Static Network Configuration | ✅ Completed |
+| Active Directory Domain Services | ✅ Completed |
+| DNS Configuration and Validation | ✅ Completed |
+| Organizational Unit Structure | ✅ Completed |
+| Users and Security Groups | ✅ Completed |
+| Administrative Account Separation | ✅ Completed |
+| pfSense Firewall | ⏳ Next milestone |
+| DHCP Server | ⏳ Planned |
+| Windows 11 Domain Client | ⏳ Planned |
+| Group Policy | ⏳ Planned |
+| File Server | ⏳ Planned |
+| SIEM and Monitoring | ⏳ Planned |
+
+---
+
+## Latest Milestone
+
+The first domain controller, DC01, was successfully deployed using
+Windows Server 2022.
+
+Current environment:
+
+- Domain: corp.juniorlab.test
+- NetBIOS name: CORP
+- Domain Controller: DC01
+- DC01 address: 192.168.10.10/24
+- DNS server: DC01
+- Network: VirtualBox Internal Network (LAB-LAN)
+- Active Directory DNS and service tests completed successfully
+- Departmental OUs, users and security groups created
+- Separate standard and privileged administrator accounts implemented
 
 ---
 
@@ -75,10 +107,10 @@ This project aims to improve my practical skills in:
 |--------|--------|
 | Project Planning | ✅ Completed |
 | Lab Architecture | ✅ Completed |
-| VirtualBox Installation | ⏳ In Progress |
-| Windows Server Installation | ⏳ Pending |
-| Active Directory | ⏳ Pending |
-| DNS | ⏳ Pending |
+| VirtualBox Installation |  ✅ Completed |
+| Windows Server Installation |  ✅ Completed |
+| Active Directory |  ✅ Completed |
+| DNS |  ✅ Completed |
 | DHCP | ⏳ Pending |
 | GPO | ⏳ Pending |
 | File Server | ⏳ Pending |
