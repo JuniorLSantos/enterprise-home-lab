@@ -73,3 +73,133 @@ Corp
     ├── HR
     ├── IT
     └── Sales
+    
+    ```
+
+This structure separates users, computers, servers, service accounts
+and administrative accounts.
+
+It will also allow Group Policies to be applied to specific departments
+and types of devices in future stages of the project.
+
+---
+
+## Security Groups
+
+The following Global Security groups were created:
+
+| Group | Purpose |
+|---|---|
+| GG_IT_Users | IT department users |
+| GG_HR_Users | Human Resources users |
+| GG_Finance_Users | Finance department users |
+| GG_Sales_Users | Sales department users |
+
+The `GG` prefix identifies the groups as Global Groups.
+
+Users were added to groups according to their departments instead of
+being assigned permissions individually.
+
+---
+
+## User Accounts
+
+Test users were created to simulate employees from different departments.
+
+| User | Department | Security Group |
+|---|---|---|
+| Junior Santos | IT | GG_IT_Users |
+| Helena Costa | HR | GG_HR_Users |
+| Marcos Ribeiro | Finance | GG_Finance_Users |
+| Beatriz Alves | Sales | GG_Sales_Users |
+
+These accounts are used only inside the lab environment.
+
+---
+
+## Administrative Account Separation
+
+Two separate account types were implemented:
+
+- A standard account for normal daily activities.
+- A privileged account for administrative tasks.
+
+The privileged account was added to the Domain Admins group, while the
+standard account remained without domain administrative privileges.
+
+This follows the principle of least privilege and reduces the risk of
+performing daily activities with unnecessary administrative access.
+
+---
+
+## Validation
+
+The following PowerShell commands were used to validate the environment:
+
+```powershell
+Get-ADDomain
+Get-ADForest
+Get-ADDomainController
+Get-ADOrganizationalUnit -Filter *
+Get-ADGroupMember "Domain Admins"
+```
+
+Active Directory health was also tested with:
+
+```powershell
+dcdiag
+dcdiag /test:Advertising
+dcdiag /test:Services
+dcdiag /test:DNS
+```
+
+The Connectivity, Advertising, Services and DNS tests completed
+successfully.
+
+---
+
+## Problems Encountered
+
+### Moving an Organizational Unit
+
+An Organizational Unit was accidentally created under the wrong parent
+OU. The move was initially blocked because the object was protected
+against accidental deletion.
+
+The protection was temporarily disabled, the OU was moved to the correct
+location and the protection was enabled again.
+
+### Password Complexity Rejection
+
+A password was initially rejected even though it contained uppercase
+and lowercase letters, numbers and special characters.
+
+The password contained part of the account name. After using a password
+without information related to the username, the account was created
+successfully.
+
+No passwords are stored in this repository.
+
+---
+
+## Lessons Learned
+
+- Installing AD DS and promoting a server are separate operations.
+- Active Directory depends heavily on DNS.
+- Domain controllers require predictable IP addresses.
+- Organizational Units and security groups have different purposes.
+- Administrative accounts should not be used for daily activities.
+- Configuration must be validated instead of assuming that installation
+  means the service is working.
+
+---
+
+## Next Steps
+
+- Document the network configuration.
+- Document the DNS configuration.
+- Deploy pfSense as the lab gateway.
+- Configure DHCP.
+- Deploy a Windows 11 client.
+- Join the client to the domain.
+- Create and test Group Policies.
