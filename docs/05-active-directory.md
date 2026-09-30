@@ -74,7 +74,7 @@ Corp
     ├── IT
     └── Sales
 
-+```
+```
 
 This structure separates users, computers, servers, service accounts
 and administrative accounts.
