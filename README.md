@@ -22,7 +22,7 @@ The goal is to gain hands-on experience with Windows Server, Active Directory, L
 
 ## Project Status
 
-Last updated: September 30, 2026
+Last updated: October 2, 2026
 
 | Phase | Status |
 |---|---|
@@ -36,10 +36,10 @@ Last updated: September 30, 2026
 | Organizational Unit Structure | ✅ Completed |
 | Users and Security Groups | ✅ Completed |
 | Administrative Account Separation | ✅ Completed |
-| pfSense Firewall | ⏳ Next milestone |
+| pfSense Firewall | ✅ Completed |
 | DHCP Server | ⏳ Planned |
-| Windows 11 Domain Client | ⏳ Planned |
-| Group Policy | ⏳ Planned |
+| Windows 11 Domain Client | ✅ Completed |
+| Group Policy | ✅ First policy completed |
 | File Server | ⏳ Planned |
 | SIEM and Monitoring | ⏳ Planned |
 
@@ -47,8 +47,8 @@ Last updated: September 30, 2026
 
 ## Latest Milestone
 
-The first domain controller, DC01, was successfully deployed using
-Windows Server 2022.
+The first Windows 11 workstation was integrated with Active Directory,
+and a user-based Group Policy was deployed and validated.
 
 Current environment:
 
@@ -57,10 +57,15 @@ Current environment:
 - Domain Controller: DC01
 - DC01 address: 192.168.10.10/24
 - DNS server: DC01
+- Firewall and gateway: FW01 (pfSense) at 192.168.10.1/24
+- Domain workstation: CLIENT01 at 192.168.10.20/24
 - Network: VirtualBox Internal Network (LAB-LAN)
 - Active Directory DNS and service tests completed successfully
 - Departmental OUs, users and security groups created
 - Separate standard and privileged administrator accounts implemented
+- CLIENT01 joined to the domain and moved to the Workstations OU
+- Standard domain user authentication validated through DC01
+- IT user policy created to restrict Control Panel and Windows Settings
 
 ---
 
@@ -102,6 +107,9 @@ This project aims to improve my practical skills in:
 - [Network Configuration](docs/04-network-configuration.md)
 - [Active Directory Deployment](docs/05-active-directory.md)
 - [DNS Configuration](docs/06-dns.md)
+- [pfSense Deployment](docs/07-pfsense-deployment.md)
+- [Windows 11 Domain Client](docs/08-windows-11-domain-client.md)
+- [Group Policy Deployment](docs/09-group-policy.md)
 
 ---
 
