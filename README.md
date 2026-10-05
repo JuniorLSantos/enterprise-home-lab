@@ -22,7 +22,7 @@ The goal is to gain hands-on experience with Windows Server, Active Directory, L
 
 ## Project Status
 
-Last updated: October 2, 2026
+Last updated: October 5, 2026
 
 | Phase | Status |
 |---|---|
@@ -39,7 +39,8 @@ Last updated: October 2, 2026
 | pfSense Firewall | ✅ Completed |
 | DHCP Server | ⏳ Planned |
 | Windows 11 Domain Client | ✅ Completed |
-| Group Policy | ✅ First policy completed |
+| Group Policy | ✅ User and domain account policies completed |
+| Domain Password and Account Lockout Policy | ✅ Completed and validated |
 | File Server | ⏳ Planned |
 | SIEM and Monitoring | ⏳ Planned |
 
@@ -47,8 +48,8 @@ Last updated: October 2, 2026
 
 ## Latest Milestone
 
-The first Windows 11 workstation was integrated with Active Directory,
-and a user-based Group Policy was deployed and validated.
+The domain-wide password and account lockout policy was configured and
+validated through controlled functional tests.
 
 Current environment:
 
@@ -66,6 +67,9 @@ Current environment:
 - CLIENT01 joined to the domain and moved to the Workstations OU
 - Standard domain user authentication validated through DC01
 - IT user policy created to restrict Control Panel and Windows Settings
+- Domain password policy requires 14 characters, complexity and 24-password history
+- Accounts lock after 10 invalid authentication attempts for 15 minutes
+- Weak-password rejection, account lockout and administrative unlock validated
 
 ---
 
@@ -110,6 +114,7 @@ This project aims to improve my practical skills in:
 - [pfSense Deployment](docs/07-pfsense-deployment.md)
 - [Windows 11 Domain Client](docs/08-windows-11-domain-client.md)
 - [Group Policy Deployment](docs/09-group-policy.md)
+- [Domain Password and Account Lockout Policy](docs/10-domain-account-security.md)
 
 ---
 
