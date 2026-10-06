@@ -274,8 +274,8 @@ consumes them and, when possible, through a functional test.
 
 ## Next Steps
 
-- Review failed-logon and lockout events in Windows Event Viewer.
-- Document event IDs related to failed authentication and account lockout.
+- Completed follow-up: [Windows Security Event Auditing](11-security-event-auditing.md),
+  including failed-logon, lockout and administrative-unlock correlation.
 - Evaluate Fine-Grained Password Policies for groups that require different
   password rules.
 - Continue with workstation and domain security baseline policies.
