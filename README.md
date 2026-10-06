@@ -22,7 +22,7 @@ The goal is to gain hands-on experience with Windows Server, Active Directory, L
 
 ## Project Status
 
-Last updated: October 5, 2026
+Last updated: October 6, 2026
 
 | Phase | Status |
 |---|---|
@@ -41,6 +41,7 @@ Last updated: October 5, 2026
 | Windows 11 Domain Client | ✅ Completed |
 | Group Policy | ✅ User and domain account policies completed |
 | Domain Password and Account Lockout Policy | ✅ Completed and validated |
+| Windows Security Event Auditing | ✅ Completed and documented |
 | File Server | ⏳ Planned |
 | SIEM and Monitoring | ⏳ Planned |
 
@@ -48,8 +49,9 @@ Last updated: October 5, 2026
 
 ## Latest Milestone
 
-The domain-wide password and account lockout policy was configured and
-validated through controlled functional tests.
+The domain account-security test was investigated through Windows Security
+logs, correlating failed authentication, account lockout and administrative
+unlock events.
 
 Current environment:
 
@@ -70,6 +72,9 @@ Current environment:
 - Domain password policy requires 14 characters, complexity and 24-password history
 - Accounts lock after 10 invalid authentication attempts for 15 minutes
 - Weak-password rejection, account lockout and administrative unlock validated
+- Security events 4625, 4740 and 4767 correlated in Windows Event Viewer
+- Failed NTLM network authentication traced to DC01 at 192.168.10.10
+- Administrative unlock attributed to the separate `junior.admin` account
 
 ---
 
@@ -115,6 +120,7 @@ This project aims to improve my practical skills in:
 - [Windows 11 Domain Client](docs/08-windows-11-domain-client.md)
 - [Group Policy Deployment](docs/09-group-policy.md)
 - [Domain Password and Account Lockout Policy](docs/10-domain-account-security.md)
+- [Windows Security Event Auditing](docs/11-security-event-auditing.md)
 
 ---
 
