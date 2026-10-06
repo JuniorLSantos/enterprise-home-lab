@@ -49,6 +49,7 @@ IDs:
 Filtering only changes which records are displayed. It does not delete or
 modify the Security log.
 
+![Security log filtered for authentication and account-management events](../images/security-auditing/01-filtered-security-events.png)
 
 The captured sequence contained the three events required to reconstruct the
 test: repeated 4625 failures, followed by 4740 and then 4767.
@@ -69,6 +70,7 @@ Event 4625 recorded an unsuccessful authentication attempt for
 | Sub Status | `0xC000006A` | The account name was valid, but the password was incorrect |
 | Keywords | Audit Failure | The authentication operation failed |
 
+![Event 4625 showing the failed account and status codes](../images/security-auditing/02-event-4625-failed-logon.png)
 
 The status gives the general authentication result, while the substatus
 provides the more specific cause. Reading both fields avoids treating every
@@ -84,6 +86,7 @@ provides the more specific cause. Reading both fields avoids treating every
 | Logon Process | `NtLmSsp` |
 | Authentication Package | `NTLM` |
 
+![Event 4625 showing the source and NTLM authentication details](../images/security-auditing/03-event-4625-network-details.png)
 
 The source was DC01 because the controlled invalid-credential attempts were
 generated locally on the server. Logon type 3 shows that Windows processed the
@@ -105,6 +108,7 @@ After the configured threshold of ten invalid attempts was reached, event
 | Logged | October 5, 2026 at 08:26:49 |
 | Keywords | Audit Success |
 
+![Event 4740 showing the policy.test account lockout](../images/security-auditing/04-event-4740-account-lockout.png)
 
 The trailing `$` in `DC01$` identifies it as the Active Directory computer
 account for the server. `Audit Success` means Windows successfully audited the
@@ -125,6 +129,7 @@ Event 4767 recorded the manual unlock performed after the lockout test.
 | Computer | `DC01.corp.juniorlab.test` |
 | Keywords | Audit Success |
 
+![Event 4767 showing the administrator and unlocked account](../images/security-auditing/05-event-4767-account-unlocked.png)
 
 This event provides administrative accountability by identifying both the
 target account and the privileged identity that performed the unlock.
