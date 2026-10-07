@@ -22,7 +22,7 @@ The goal is to gain hands-on experience with Windows Server, Active Directory, L
 
 ## Project Status
 
-Last updated: October 6, 2026
+Last updated: October 7, 2026
 
 | Phase | Status |
 |---|---|
@@ -37,7 +37,7 @@ Last updated: October 6, 2026
 | Users and Security Groups | ✅ Completed |
 | Administrative Account Separation | ✅ Completed |
 | pfSense Firewall | ✅ Completed |
-| DHCP Server | ⏳ Planned |
+| DHCP Server | ✅ Completed and validated |
 | Windows 11 Domain Client | ✅ Completed |
 | Group Policy | ✅ User and domain account policies completed |
 | Domain Password and Account Lockout Policy | ✅ Completed and validated |
@@ -49,9 +49,9 @@ Last updated: October 6, 2026
 
 ## Latest Milestone
 
-The domain account-security test was investigated through Windows Security
-logs, correlating failed authentication, account lockout and administrative
-unlock events.
+Windows DHCP Server was installed on DC01, authorized in Active Directory and
+validated with a live lease issued to CLIENT01. DHCP was disabled on pfSense
+to prevent conflicting address assignments.
 
 Current environment:
 
@@ -61,8 +61,15 @@ Current environment:
 - DC01 address: 192.168.10.10/24
 - DNS server: DC01
 - Firewall and gateway: FW01 (pfSense) at 192.168.10.1/24
-- Domain workstation: CLIENT01 at 192.168.10.20/24
+- Domain workstation: CLIENT01 using DHCP (validated lease: 192.168.10.100/24)
 - Network: VirtualBox Internal Network (LAB-LAN)
+- DHCP server: DC01 at 192.168.10.10
+- Active DHCP scope: CORP-LAN (192.168.10.100-192.168.10.200)
+- DHCP options distribute gateway 192.168.10.1, DNS 192.168.10.10 and the
+  domain suffix
+- pfSense LAN DHCP disabled to keep DC01 as the only DHCP server
+- Client lease, gateway connectivity and internal/external DNS resolution
+  validated
 - Active Directory DNS and service tests completed successfully
 - Departmental OUs, users and security groups created
 - Separate standard and privileged administrator accounts implemented
@@ -121,6 +128,7 @@ This project aims to improve my practical skills in:
 - [Group Policy Deployment](docs/09-group-policy.md)
 - [Domain Password and Account Lockout Policy](docs/10-domain-account-security.md)
 - [Windows Security Event Auditing](docs/11-security-event-auditing.md)
+- [Windows DHCP Server Deployment and Validation](docs/12-dhcp-server.md)
 
 ---
 

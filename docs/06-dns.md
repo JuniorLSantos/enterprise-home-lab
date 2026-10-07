@@ -150,16 +150,18 @@ corp.juniorlab.test passed test DNS
 
 ---
 
-## Current Limitations
+## Current State and Limitation
 
-The current environment does not yet have:
+External DNS forwarding and internet name resolution through pfSense were
+subsequently configured. DNS was also validated from the domain workstation:
 
-- External DNS forwarding
-- Internet name resolution through pfSense
-- A reverse lookup zone for `192.168.10.0/24`
-- DNS validation from a domain client
+- `dc01.corp.juniorlab.test` resolved to `192.168.10.10`.
+- External names such as `google.com` resolved through DC01.
+- CLIENT01 used `192.168.10.10` as its DNS server through DHCP.
 
-These items will be implemented or tested in future project phases.
+The remaining DNS improvement is a reverse lookup zone for
+`192.168.10.0/24`. Without a matching PTR record, tools such as `nslookup` can
+show the DNS server name as `Unknown` even though forward resolution works.
 
 ---
 
@@ -177,10 +179,6 @@ These items will be implemented or tested in future project phases.
 
 ## Next Steps
 
-- Deploy pfSense.
-- Configure DNS forwarding.
 - Create a reverse lookup zone for the lab network.
-- Deploy a Windows 11 client.
-- Configure the client to use DC01 as its DNS server.
-- Repeat the DNS tests from the client.
-- Join the client to the domain.
+- Add PTR records for statically addressed infrastructure systems.
+- Forward DNS events and service health data to the future monitoring system.

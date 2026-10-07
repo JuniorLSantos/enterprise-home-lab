@@ -18,7 +18,8 @@ that a user can authenticate through the domain controller.
 |---|---|
 | Computer name | CLIENT01 |
 | Operating system | Windows 11 Pro |
-| IPv4 address | 192.168.10.20/24 |
+| Initial IPv4 address | 192.168.10.20/24 (static) |
+| Current addressing | DHCP (192.168.10.100 during validation) |
 | Default gateway | 192.168.10.1 (FW01) |
 | DNS server | 192.168.10.10 (DC01) |
 | VirtualBox network | LAB-LAN |
@@ -43,6 +44,11 @@ nslookup corp.juniorlab.test
 CLIENT01 successfully reached DC01, and the domain name resolved to
 `192.168.10.10`. This confirmed that the workstation was using the internal DNS
 server required for Active Directory discovery.
+
+The static address was used during the original workstation deployment. After
+the Windows DHCP Server was deployed on DC01, CLIENT01 was migrated to dynamic
+addressing and successfully received `192.168.10.100`. The migration is
+documented in [Windows DHCP Server Deployment and Validation](12-dhcp-server.md).
 
 ---
 
@@ -173,7 +179,8 @@ distinguished name. The command succeeded after signing in as
 
 ---
 
-## Next Step
+## Subsequent Milestone
 
-Create a user-based Group Policy, link it to the IT Organizational Unit and
-validate its application on CLIENT01.
+A user-based Group Policy was later linked to the IT Organizational Unit and
+validated on CLIENT01. DHCP client configuration was also validated after the
+workstation deployment.

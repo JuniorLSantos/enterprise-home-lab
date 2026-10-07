@@ -194,12 +194,11 @@ No passwords are stored in this repository.
 
 ---
 
-## Next Steps
+## Subsequent Milestones
 
-- Document the network configuration.
-- Document the DNS configuration.
-- Deploy pfSense as the lab gateway.
-- Configure DHCP.
-- Deploy a Windows 11 client.
-- Join the client to the domain.
-- Create and test Group Policies.
+- Network and DNS configuration documented.
+- pfSense deployed as the lab gateway.
+- Windows 11 client deployed and joined to the domain.
+- User and domain account Group Policies tested.
+- Windows DHCP Server deployed and validated.
+- Next planned infrastructure service: Windows file services.

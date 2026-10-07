@@ -43,25 +43,42 @@ The environment is intended for study purposes and simulates a small business in
 
 | Device | IP Address | Purpose |
 |--------|------------|---------|
-| FW01 | 192.168.10.1 | Gateway / Firewall |
-| DC01 | 192.168.10.10 | Domain Controller |
-| CLIENT01 | 192.168.10.20 | Windows Client |
-| LINUX01 | 192.168.10.30 | Docker Server |
-| KALI01 | 192.168.10.40 | Security Testing |
-| SPLUNK01 | 192.168.10.50 | Log Management |
+| FW01 | 192.168.10.1 (static) | Gateway / Firewall |
+| DC01 | 192.168.10.10 (static) | Domain Controller / DNS / DHCP |
+| CLIENT01 | DHCP (validated lease: 192.168.10.100) | Windows Client |
+| LINUX01 | 192.168.10.30 (planned static) | Docker Server |
+| KALI01 | 192.168.10.40 (planned static) | Security Testing |
+| SPLUNK01 | 192.168.10.50 (planned static) | Log Management |
 
 ---
 
-## Planned Services
+## DHCP Configuration
 
-- Active Directory
-- DNS
-- DHCP
-- File Server
-- Group Policy
-- Docker
-- VPN
-- Splunk
+| Setting | Value |
+|---|---|
+| DHCP server | DC01 (`192.168.10.10`) |
+| Scope | CORP-LAN |
+| Dynamic range | `192.168.10.100` - `192.168.10.200` |
+| Default gateway | `192.168.10.1` |
+| DNS server | `192.168.10.10` |
+| DNS suffix | `corp.juniorlab.test` |
+| Lease duration | 8 days |
+
+The DHCP service on the pfSense LAN interface is disabled so that DC01 is the
+only DHCP server on `LAB-LAN`.
+
+---
+
+## Service Roadmap
+
+- Active Directory - Completed
+- DNS - Completed
+- DHCP - Completed
+- Group Policy - Completed
+- File Server - Planned
+- Docker - Planned
+- VPN - Planned
+- Splunk - Planned
 
 ---
 
@@ -70,5 +87,7 @@ The environment is intended for study purposes and simulates a small business in
 - Learned how to design the initial infrastructure before deployment.
 - Defined the virtual machines required for the lab.
 - Planned the network addressing scheme.
+- Centralized DHCP on Windows Server and separated infrastructure addresses
+  from the dynamic client pool.
 
 ---
